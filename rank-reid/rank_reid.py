@@ -6,7 +6,7 @@ from transfer.simple_rank_transfer import rank_transfer_2dataset
 
 
 def get_source_target_info(source, target):
-    source_model_path = '/home/ls/download/Tfusion/rank-reid/pretrain/%s_pair_pretrain.h5' % source
+    source_model_path = '/home/ls/dataset/Tfusion/rank-reid/pretrain/%s_pair_pretrain.h5' % source
     target_dataset_path = ''
     if target == 'market':
         target_dataset_path = '/home/ls/dataset/Market-1501'
