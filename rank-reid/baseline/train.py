@@ -16,7 +16,8 @@ from keras.optimizers import SGD
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils.np_utils import to_categorical
-
+#import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 def load_mix_data(LIST, TRAIN):
     images, labels = [], []
@@ -122,7 +123,7 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
     net.save(target_model_path)
 
 
-def softmax_pretrain_on_dataset(source, project_path='/home/cwh/coding/rank-reid', dataset_parent='/home/cwh/coding'):
+def softmax_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/rank-reid', dataset_parent='/home/ls/dataset'):
     if source == 'market':
         train_list = project_path + '/dataset/market_train.list'
         train_dir = dataset_parent + '/Market-1501/train'

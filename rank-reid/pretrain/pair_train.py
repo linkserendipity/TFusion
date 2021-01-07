@@ -12,6 +12,9 @@ from keras.optimizers import SGD
 from keras.preprocessing import image
 from keras.utils import plot_model, to_categorical
 from numpy.random import randint, shuffle, choice
+import sys
+sys.path.append("..")
+#from  import file3
 
 from baseline.train import softmax_pretrain_on_dataset
 
@@ -230,7 +233,7 @@ if __name__ == '__main__':
     for source in sources:
         softmax_pretrain_on_dataset(source,
                                     project_path='/home/ls/dataset/TFusion/rank-reid',
-                                    dataset_parent='/home/ls/dataset/')
+                                    dataset_parent='/home/ls/dataset')
         pair_pretrain_on_dataset(source)
     sources = ['grid-cv-%d' % i for i in range(10)]
     for source in sources:
