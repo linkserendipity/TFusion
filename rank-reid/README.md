@@ -30,6 +30,7 @@
 Take Market-1501 as an example:
  - download
  - rename training directory to 'train', rename probe directory to 'probe', renmae gallery directory to 'test'
+  
 
 Your data directory will look like this:
 
