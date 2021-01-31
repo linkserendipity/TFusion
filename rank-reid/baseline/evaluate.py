@@ -11,7 +11,6 @@ from keras.preprocessing import image
 
 from utils.file_helper import write, safe_remove
 
-
 def extract_info(dir_path):
     infos = []
     for image_name in sorted(os.listdir(dir_path)):
