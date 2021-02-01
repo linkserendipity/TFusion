@@ -162,6 +162,6 @@ def softmax_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/r
 
 if __name__ == '__main__':
     # sources = ['market', 'grid', 'cuhk', 'viper']
-    sources = ['market']
+    sources = ['cuhk']
     for source in sources:
         softmax_pretrain_on_dataset(source)
