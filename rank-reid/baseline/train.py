@@ -91,7 +91,7 @@ def load_data(LIST, TRAIN):
 
 
 def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path):
-    images, labels = load_data(train_list, train_dir)
+    images, labels = load_data(train_list, train_dir) # len =3884
     #embed()
     embed()
 
