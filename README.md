@@ -55,7 +55,8 @@ we use all labeled images in GRID for pretraining as source dataset, so place al
   - rename training directory to 'train', rename probe directory to 'probe', renmae gallery directory to 'test'
 
 - GRID as Target Dataset
-  - follow dataset instruction, split the dataset to ten cross-validation sets
+  - follow dataset instruction, **split the dataset to ten cross-validation sets** 
+  > how to split?
   - in each cross-validation set, rename training directory to 'train', rename probe directory to 'probe', renmae gallery directory to 'test'
   - you can also refer to 'TrackViz/data/grid' for more details about GRID cross validation.
 
