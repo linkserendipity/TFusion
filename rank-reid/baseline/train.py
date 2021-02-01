@@ -118,7 +118,7 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
     net.compile(optimizer=SGD(lr=0.001, momentum=0.9), loss='categorical_crossentropy', metrics=['accuracy'])
     net.fit_generator(
         train_datagen.flow(images, labels, batch_size=batch_size),
-        steps_per_epoch=len(images) / batch_size + 1, epochs=40,
+        steps_per_epoch=len(images) / batch_size + 1, epochs=40, ## bug?
     )
     net.save(target_model_path)
 
