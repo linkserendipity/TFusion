@@ -229,7 +229,7 @@ def pair_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/rank
 
 if __name__ == '__main__':
     sources = ['cuhk_grid_viper_mix']
-    sources = ['cuhk', 'viper', 'market','duke']
+    sources = ['cuhk', 'viper', 'market', 'duke']
     for source in sources:
         softmax_pretrain_on_dataset(source,
                                     project_path='/home/ls/dataset/TFusion/rank-reid',
