@@ -16,6 +16,8 @@ from keras.optimizers import SGD
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils.np_utils import to_categorical
+from IPython import embed
+
 #import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
@@ -90,6 +92,9 @@ def load_data(LIST, TRAIN):
 
 def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path):
     images, labels = load_data(train_list, train_dir)
+    #embed()
+    embed()
+
     config = tf.ConfigProto()
     config.gpu_options.allow_growth = True
 
@@ -118,7 +123,8 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
     net.compile(optimizer=SGD(lr=0.001, momentum=0.9), loss='categorical_crossentropy', metrics=['accuracy'])
     net.fit_generator(
         train_datagen.flow(images, labels, batch_size=batch_size),
-        steps_per_epoch=len(images) / batch_size + 1, epochs=40,  #bug?
+        steps_per_epoch=len(images) / batch_size + 1, epochs=40,  
+        #bug? ValueError: Error when checking target: expected fc8 to have shape (971,) but got array with shape (3884,)
     )
     net.save(target_model_path)
 
