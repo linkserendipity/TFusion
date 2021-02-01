@@ -19,7 +19,7 @@ from keras.utils.np_utils import to_categorical
 from IPython import embed
 
 #import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 def load_mix_data(LIST, TRAIN):
     images, labels = [], []
