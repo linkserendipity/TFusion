@@ -6,7 +6,7 @@ from util.file_helper import safe_mkdir
 
 
 def fusion_dir_prepare(source, target):
-    fusion_data_path = '/home/ls/coding/TrackViz/data/'
+    fusion_data_path = '/home/ls/dataset/TFusion/TrackViz/data/'
     fusion_train_dir = fusion_data_path + '/' + source + '_' + target + '-train'
     fusion_test_dir = fusion_data_path + '/' + source + '_' + target + '-test'
     safe_mkdir(fusion_train_dir)
@@ -22,7 +22,7 @@ def vision_rank(source, target):
     vision_test_rank_pids_path = fusion_test_dir + '/renew_pid.log'
     vision_test_rank_scores_path = fusion_test_dir + '/renew_ac.log'
     os.environ.setdefault('LD_LIBRARY_PATH', '/usr/local/cuda/lib64')
-    os.system('/home/ls/anaconda2/bin/python /home/ls/coding/rank-reid/rank_reid.py 0 '
+    os.system('/home/ls/anaconda3/bin/python /home/ls/dataset/TFusion/rank-reid/rank_reid.py 0 '
               + source + ' ' + target + ' '
               + vision_train_rank_pids_path + ' '
               + vision_train_rank_scores_path + ' '
@@ -33,7 +33,7 @@ def vision_rank(source, target):
 
 def dataset_eval(source, target, rank_pids_path):
     os.environ.setdefault('LD_LIBRARY_PATH', '/usr/local/cuda/lib64')
-    os.system('/home/ls/anaconda2/bin/python /home/ls/coding/rank-reid/rank_reid.py 2 '
+    os.system('/home/ls/anaconda3/bin/python /home/ls/dataset/TFusion/rank-reid/rank_reid.py 2 '
               + target + ' ' + rank_pids_path)
 
 
@@ -42,7 +42,7 @@ def st_fusion(source, target):
     init_strict_img_st_fusion()
 
     ctrl_msg['data_folder_path'] = source + '_' + target + '-train'
-    fusion_data_path = '/home/ls/coding/TrackViz/'
+    fusion_data_path = '/home/ls/dataset/TFusion/TrackViz/'
     fusion_param = get_fusion_param()
     fusion_train_rank_pids_path = fusion_data_path + fusion_param['eval_fusion_path']
     fusion_train_rank_scores_path = fusion_data_path + fusion_param['fusion_normal_score_path']
@@ -60,17 +60,17 @@ def rank_transfer(source, target, fusion_train_rank_pids_path, fusion_train_rank
     transfer_test_rank_pids_path = fusion_test_dir + '/renew_pid.log'
     transfer_test_rank_scores_path = fusion_test_dir + '/renew_ac.log'
     if 'grid' in target:
-        target_train_list = '/home/ls/coding/TrackViz/data/grid/' + target + '-train.txt'
+        target_train_list = '/home/ls/dataset/TFusion/TrackViz/data/grid/' + target + '-train.txt'
     elif target == 'markets1':
-        target_train_list = '/home/ls/coding/TrackViz/data/markets1/train.txt'
+        target_train_list = '/home/ls/dataset/TFusion/TrackViz/data/markets1/train.txt'
     elif target == 'market':
-        target_train_list = '/home/ls/coding/TrackViz/data/market/train.txt'
+        target_train_list = '/home/ls/dataset/TFusion/TrackViz/data/market/train.txt'
     elif target == 'duke':
-        target_train_list = '/home/ls/coding/TrackViz/data/duke/train.list'
+        target_train_list = '/home/ls/dataset/TFusion/TrackViz/data/duke/train.list'
     else:
         target_train_list = 'error_target_dataset'
     os.environ.setdefault('LD_LIBRARY_PATH', '/usr/local/cuda/lib64')
-    os.system('/home/ls/anaconda2/bin/python /home/ls/coding/rank-reid/rank_reid.py 1 '
+    os.system('/home/ls/anaconda3/bin/python /home/ls/dataset/TFusion/rank-reid/rank_reid.py 1 '
               + source + ' ' + target + ' '
               + fusion_train_rank_pids_path + ' '
               + fusion_train_rank_scores_path + ' '

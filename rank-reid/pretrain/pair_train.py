@@ -227,14 +227,16 @@ def pair_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/rank
         batch_size=batch_size, num_classes=class_count
     )
 
+
 if __name__ == '__main__':
-    sources = ['cuhk_grid_viper_mix']
+    # sources = ['cuhk_grid_viper_mix']
     sources = ['cuhk', 'viper', 'market', 'duke']
     for source in sources:
         softmax_pretrain_on_dataset(source,
                                     project_path='/home/ls/dataset/TFusion/rank-reid',
                                     dataset_parent='/home/ls/dataset')
         pair_pretrain_on_dataset(source)
+        
     sources = ['grid-cv-%d' % i for i in range(10)]
     for source in sources:
         softmax_pretrain_on_dataset(source,
