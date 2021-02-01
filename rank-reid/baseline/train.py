@@ -165,6 +165,7 @@ def softmax_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/r
     softmax_model_pretrain(train_list, train_dir, class_count, '../pretrain/' + source + '_softmax_pretrain.h5')
 
 
+
 if __name__ == '__main__':
     # sources = ['market', 'grid', 'cuhk', 'viper']
     sources = ['cuhk']
