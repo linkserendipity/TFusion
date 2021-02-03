@@ -202,6 +202,7 @@ def pair_pretrain_on_dataset(source, project_path='/home/ls/dataset/TFusion/rank
         class_count = 630
     elif source == 'duke':
         train_list = project_path + '/dataset/duke_train.list'
+        # ! where is duke_train.list?
         train_dir = dataset_parent + '/DukeMTMC-reID/train'
         class_count = 702
     elif 'grid-cv' in source:
