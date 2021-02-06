@@ -8,7 +8,7 @@ TrackViz
 ├── data # dataset config and ranking results
 ├── post_process # compute spatial-temporal score
 ├── pre_process # some code for visualization
-├── profile # configuration for model files
+├── profile1 # configuration for model files
 ├── README.md # this file
 ├── train # build spatial temportal model, compute fusion score
 └── util # some utitlities

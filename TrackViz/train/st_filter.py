@@ -1,6 +1,6 @@
 # coding=utf-8
 from post_process.track_prob import track_score
-from profile.fusion_param import get_fusion_param, ctrl_msg
+from profile1.fusion_param import get_fusion_param, ctrl_msg
 from util.file_helper import read_lines, read_lines_and, write, safe_remove
 from util.serialize import pickle_load
 

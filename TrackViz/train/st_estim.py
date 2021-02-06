@@ -3,7 +3,7 @@ from random import randint
 
 import shutil
 
-from profile.fusion_param import ctrl_msg
+from profile1.fusion_param import ctrl_msg
 from util.file_helper import read_lines, safe_remove, safe_mkdir
 from util.serialize import pickle_save
 from util.str_helper import folder

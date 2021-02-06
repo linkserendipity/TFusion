@@ -1,4 +1,4 @@
-from profile.fusion_param import ctrl_msg, get_fusion_param
+from profile1.fusion_param import ctrl_msg, get_fusion_param
 from train.st_filter import train_tracks
 from util.file_helper import read_lines
 

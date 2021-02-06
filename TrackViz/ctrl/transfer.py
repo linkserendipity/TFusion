@@ -1,18 +1,18 @@
 import os
-from IPython import embed
+# from IPython import embed
 import sys
 
-sys.path.append("/home/ls/dataset/TFusion/TrackViz/profile")
+sys.path.append("/home/ls/dataset/TFusion/TrackViz/profile1")
 sys.path.append("/home/ls/dataset/TFusion/TrackViz/util")
 sys.path.append("/home/ls/dataset/TFusion/TrackViz")
 sys.path.append("..")
 
-# from profile.fusion_param import ctrl_msg, get_fusion_param
-# from profile.fusion_param import ctrl_msg, get_fusion_param
-# from ctrl.img_st_fusion import init_strict_img_st_fusion
+# from profile1.fusion_param import ctrl_msg, get_fusion_param
+from profile1.fusion_param import ctrl_msg, get_fusion_param
+from ctrl.img_st_fusion import init_strict_img_st_fusion
 from util.file_helper import safe_mkdir
 
-embed()
+# embed()
 
 def fusion_dir_prepare(source, target):
     fusion_data_path = '/home/ls/dataset/TFusion/TrackViz/data/'
