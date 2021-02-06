@@ -7,9 +7,9 @@ sys.path.append("/home/ls/dataset/TFusion/TrackViz/util")
 sys.path.append("/home/ls/dataset/TFusion/TrackViz")
 sys.path.append("..")
 
-from profile.fusion_param import ctrl_msg, get_fusion_param
 # from profile.fusion_param import ctrl_msg, get_fusion_param
-from ctrl.img_st_fusion import init_strict_img_st_fusion
+# from profile.fusion_param import ctrl_msg, get_fusion_param
+# from ctrl.img_st_fusion import init_strict_img_st_fusion
 from util.file_helper import safe_mkdir
 
 embed()
