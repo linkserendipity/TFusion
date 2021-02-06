@@ -1,3 +1,9 @@
+import sys
+sys.path.append("/home/ls/dataset/TFusion/TrackViz")
+
+# sys.path.append(".")
+sys.path.append("/home/ls/dataset/TFusion/TrackViz/ctrl")
+
 ctrl_msg = {
     'data_folder_path': 'market_market-test',
     'cv_num': 0,

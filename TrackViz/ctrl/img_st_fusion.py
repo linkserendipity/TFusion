@@ -2,7 +2,9 @@
 import shutil
 
 import os
-
+import sys
+sys.path.append(".")
+sys.path.append("/home/ls/dataset/TFusion/TrackViz/profile")
 from profile.fusion_param import get_fusion_param, ctrl_msg
 from train.st_estim import get_predict_delta_tracks, prepare_rand_folder, prepare_diff_folder
 from train.st_filter import fusion_st_img_ranker, fusion_st_gallery_ranker
